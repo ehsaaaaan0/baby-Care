@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#d1d1f9</color>
+    <color name="purple_500">#d1d1f9</color>
+    <color name="purple_700">#d1d1f9</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="appColor">#d1d1f9</color>
+    <color name="appColorPink">#002767</color>
+    <color name="editTextColor">#F4F6FC</color>
+
+    <color name="color1">#CCD4BF</color>
+    <color name="color2">#E5DB9C</color>
+    <color name="color3">#BEB4C5</color>
+    <color name="color4">#F5F3E7</color>
+    <color name="color5">#EEBAB2</color>
+    <color name="color6">#E5DBD9</color>
+    <color name="color7">#F5E2E4</color>
+    <color name="color8">#AAD9CD</color>
+    <color name="color9">#CAE7E3</color>
+    <color name="color10">#DEEDE6</color>
+    <color name="gray">#aaa</color>
+</resources>

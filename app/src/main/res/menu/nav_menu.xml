@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFrag"
+        android:title="@string/home"
+        app:iconTint="@color/appColorPink"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/devFrag"
+        android:title="@string/development"
+        app:iconTint="@color/appColorPink"
+        android:icon="@drawable/ic_dev"/>
+
+
+    <item
+        android:id="@+id/howFrag"
+        android:title="@string/how_to"
+        app:iconTint="@color/appColorPink"
+        android:icon="@drawable/ic_help"/>
+
+
+
+</menu>

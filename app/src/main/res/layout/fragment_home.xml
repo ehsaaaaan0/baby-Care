@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".fragments.HomeFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="@dimen/_14sdp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/appColor"
+                android:background="@drawable/toolbar_bg"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:id="@+id/detailCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animationView"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/kid_lottie" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:elevation="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_20sdp"
+                                android:fontFamily="@font/inter_bold"
+                                android:textColor="@color/appColorPink"
+                                android:textSize="@dimen/_18sdp" />
+
+                            <TextView
+                                android:id="@+id/age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_100sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/inter_regular"
+                                android:textColor="@color/appColorPink"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView1"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_centerInParent="true"
+                    app:lottie_rawRes="@raw/no_data"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    android:translationZ="@dimen/_10sdp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:justificationMode="inter_word"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="@string/current_development_stage_of_your_baby"
+                        android:textColor="@color/appColorPink"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textSize="@dimen/_12sdp"
+                        tools:targetApi="o"
+                        android:id="@+id/text"/>
+
+                    <io.github.glailton.expandabletextview.ExpandableTextView
+                        android:justificationMode="inter_word"
+                        android:background="?selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:id="@+id/content"
+                        android:layout_marginHorizontal="@dimen/_14sdp"
+                        android:textColor="@color/appColorPink"
+                        android:textSize="@dimen/_10sdp"
+                        tools:targetApi="o"
+                        app:isExpanded="false"
+                        app:readMoreText="Read more"
+                        app:readLessText="Read less"
+                        app:textMode="line"
+                        app:collapsedLines="3"
+                        app:animDuration="1000"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:layoutAnimation="@anim/layout_animation"
+                        android:id="@+id/recyclerView"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

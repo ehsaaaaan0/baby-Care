@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.NotesMainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolBar"
+        android:background="@color/appColor"
+        android:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter_black"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                android:layout_centerVertical="true"
+                app:tint="@color/black"
+                android:id="@+id/back"/>
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_60sdp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:id="@+id/recyclerView"/>
+
+        </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:icon="@drawable/add_new"
+        android:text="@string/add_note"
+        android:backgroundTint="@color/appColor"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:iconTint="@color/black"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_anchor="@+id/addNote"
+        app:layout_anchorGravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:padding="@dimen/_50sdp"
+        app:lottie_rawRes="@raw/no_data" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
